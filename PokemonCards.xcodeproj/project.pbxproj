@@ -13,6 +13,9 @@
 		B1568FC1268EC81900AF8EEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FB1268EC81800AF8EEC /* ContentView.swift */; };
 		B1568FC2268EC81900AF8EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1568FB2268EC81900AF8EEC /* Assets.xcassets */; };
 		B1568FC3268EC81900AF8EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1568FB2268EC81900AF8EEC /* Assets.xcassets */; };
+		B1568FCE268EC84E00AF8EEC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FCD268EC84E00AF8EEC /* NetworkError.swift */; };
+		B1568FD1268EC91C00AF8EEC /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FD0268EC91C00AF8EEC /* APIEndpoint.swift */; };
+		B1568FD4268EC97E00AF8EEC /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FD3268EC97E00AF8EEC /* NetworkServices.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +24,9 @@
 		B1568FB2268EC81900AF8EEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B1568FB7268EC81900AF8EEC /* PokemonCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1568FBD268EC81900AF8EEC /* PokemonCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B1568FCD268EC84E00AF8EEC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		B1568FD0268EC91C00AF8EEC /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		B1568FD3268EC97E00AF8EEC /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +50,9 @@
 		B1568FAA268EC81700AF8EEC = {
 			isa = PBXGroup;
 			children = (
+				B1568FD2268EC96C00AF8EEC /* Services */,
+				B1568FCF268EC91000AF8EEC /* Endpoint */,
+				B1568FCC268EC83D00AF8EEC /* Errors */,
 				B1568FAF268EC81800AF8EEC /* Shared */,
 				B1568FB8268EC81900AF8EEC /* Products */,
 			);
@@ -66,6 +75,30 @@
 				B1568FBD268EC81900AF8EEC /* PokemonCards.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		B1568FCC268EC83D00AF8EEC /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				B1568FCD268EC84E00AF8EEC /* NetworkError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		B1568FCF268EC91000AF8EEC /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+				B1568FD0268EC91C00AF8EEC /* APIEndpoint.swift */,
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		B1568FD2268EC96C00AF8EEC /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				B1568FD3268EC97E00AF8EEC /* NetworkServices.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,8 +199,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B1568FD4268EC97E00AF8EEC /* NetworkServices.swift in Sources */,
+				B1568FCE268EC84E00AF8EEC /* NetworkError.swift in Sources */,
 				B1568FC0268EC81900AF8EEC /* ContentView.swift in Sources */,
 				B1568FBE268EC81900AF8EEC /* PokemonCardsApp.swift in Sources */,
+				B1568FD1268EC91C00AF8EEC /* APIEndpoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
