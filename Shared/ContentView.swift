@@ -8,9 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var cardsService = CardsService()
+    
     var body: some View {
-        Text("Hello, world!")
+        Text("Hello")
             .padding()
+            .onAppear {
+                async {
+                    try? await cardsService.cards(pageNumber: 1)
+                    print(cardsService.cards)
+                }
+            }
     }
 }
 

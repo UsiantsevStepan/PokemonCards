@@ -15,7 +15,10 @@
 		B1568FC3268EC81900AF8EEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1568FB2268EC81900AF8EEC /* Assets.xcassets */; };
 		B1568FCE268EC84E00AF8EEC /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FCD268EC84E00AF8EEC /* NetworkError.swift */; };
 		B1568FD1268EC91C00AF8EEC /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FD0268EC91C00AF8EEC /* APIEndpoint.swift */; };
-		B1568FD4268EC97E00AF8EEC /* NetworkServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FD3268EC97E00AF8EEC /* NetworkServices.swift */; };
+		B1568FD4268EC97E00AF8EEC /* NetworkService+Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FD3268EC97E00AF8EEC /* NetworkService+Network.swift */; };
+		B1568FD8268ED4C800AF8EEC /* CardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FD7268ED4C800AF8EEC /* CardsService.swift */; };
+		B1568FDA268ED50A00AF8EEC /* CardsServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FD9268ED50A00AF8EEC /* CardsServiceError.swift */; };
+		B1568FDD268ED95400AF8EEC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FDC268ED95400AF8EEC /* Card.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +29,10 @@
 		B1568FBD268EC81900AF8EEC /* PokemonCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokemonCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1568FCD268EC84E00AF8EEC /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		B1568FD0268EC91C00AF8EEC /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
-		B1568FD3268EC97E00AF8EEC /* NetworkServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServices.swift; sourceTree = "<group>"; };
+		B1568FD3268EC97E00AF8EEC /* NetworkService+Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NetworkService+Network.swift"; sourceTree = "<group>"; };
+		B1568FD7268ED4C800AF8EEC /* CardsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsService.swift; sourceTree = "<group>"; };
+		B1568FD9268ED50A00AF8EEC /* CardsServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsServiceError.swift; sourceTree = "<group>"; };
+		B1568FDC268ED95400AF8EEC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,7 @@
 		B1568FAA268EC81700AF8EEC = {
 			isa = PBXGroup;
 			children = (
+				B1568FDB268ED94900AF8EEC /* Models */,
 				B1568FD2268EC96C00AF8EEC /* Services */,
 				B1568FCF268EC91000AF8EEC /* Endpoint */,
 				B1568FCC268EC83D00AF8EEC /* Errors */,
@@ -81,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				B1568FCD268EC84E00AF8EEC /* NetworkError.swift */,
+				B1568FD9268ED50A00AF8EEC /* CardsServiceError.swift */,
 			);
 			path = Errors;
 			sourceTree = "<group>";
@@ -96,9 +104,34 @@
 		B1568FD2268EC96C00AF8EEC /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				B1568FD3268EC97E00AF8EEC /* NetworkServices.swift */,
+				B1568FD6268ED4A200AF8EEC /* Local */,
+				B1568FD5268ED49A00AF8EEC /* Network */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		B1568FD5268ED49A00AF8EEC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B1568FD3268EC97E00AF8EEC /* NetworkService+Network.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B1568FD6268ED4A200AF8EEC /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				B1568FD7268ED4C800AF8EEC /* CardsService.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
+		B1568FDB268ED94900AF8EEC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B1568FDC268ED95400AF8EEC /* Card.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,11 +232,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B1568FD4268EC97E00AF8EEC /* NetworkServices.swift in Sources */,
+				B1568FD4268EC97E00AF8EEC /* NetworkService+Network.swift in Sources */,
 				B1568FCE268EC84E00AF8EEC /* NetworkError.swift in Sources */,
 				B1568FC0268EC81900AF8EEC /* ContentView.swift in Sources */,
+				B1568FD8268ED4C800AF8EEC /* CardsService.swift in Sources */,
 				B1568FBE268EC81900AF8EEC /* PokemonCardsApp.swift in Sources */,
+				B1568FDA268ED50A00AF8EEC /* CardsServiceError.swift in Sources */,
 				B1568FD1268EC91C00AF8EEC /* APIEndpoint.swift in Sources */,
+				B1568FDD268ED95400AF8EEC /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +381,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -375,7 +411,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

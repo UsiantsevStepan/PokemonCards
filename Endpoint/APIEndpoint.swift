@@ -42,7 +42,7 @@ extension APIEndpoint: Endpoint {
     }
 
     var params: [String: String] {
-        var queryParams: [String: String] = [:]
+        var queryParams = ["pageSize": "5"]
 
         switch self {
         case .getCards(page: let pageNumber):
