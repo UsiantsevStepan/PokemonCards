@@ -11,6 +11,7 @@ protocol Network {
     func getData(endpoint: APIEndpoint) async throws -> Data
 }
 
+// Code in an actor runs on a background thread
 actor NetworkService: Network {
     func getData(endpoint: APIEndpoint) async throws -> Data {
         guard let url = endpoint.urlRequest.url else {

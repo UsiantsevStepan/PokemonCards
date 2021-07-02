@@ -15,7 +15,12 @@ struct ContentView: View {
             .padding()
             .onAppear {
                 async {
-                    try? await cardsService.cards(pageNumber: 1)
+                    do {
+                        try await cardsService.cards(pageNumber: 1)
+                    } catch {
+                        print(error.localizedDescription)
+                        return
+                    }
                     print(cardsService.cards)
                 }
             }

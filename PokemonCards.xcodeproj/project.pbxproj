@@ -19,6 +19,8 @@
 		B1568FD8268ED4C800AF8EEC /* CardsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FD7268ED4C800AF8EEC /* CardsService.swift */; };
 		B1568FDA268ED50A00AF8EEC /* CardsServiceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FD9268ED50A00AF8EEC /* CardsServiceError.swift */; };
 		B1568FDD268ED95400AF8EEC /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FDC268ED95400AF8EEC /* Card.swift */; };
+		B1568FE0268F0E1900AF8EEC /* CardsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FDF268F0E1900AF8EEC /* CardsViewModel.swift */; };
+		B1568FE4268F132C00AF8EEC /* CardElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1568FE3268F132C00AF8EEC /* CardElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +35,8 @@
 		B1568FD7268ED4C800AF8EEC /* CardsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsService.swift; sourceTree = "<group>"; };
 		B1568FD9268ED50A00AF8EEC /* CardsServiceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsServiceError.swift; sourceTree = "<group>"; };
 		B1568FDC268ED95400AF8EEC /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		B1568FDF268F0E1900AF8EEC /* CardsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardsViewModel.swift; sourceTree = "<group>"; };
+		B1568FE3268F132C00AF8EEC /* CardElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		B1568FAA268EC81700AF8EEC = {
 			isa = PBXGroup;
 			children = (
+				B1568FDE268F0DF200AF8EEC /* ViewModels */,
 				B1568FDB268ED94900AF8EEC /* Models */,
 				B1568FD2268EC96C00AF8EEC /* Services */,
 				B1568FCF268EC91000AF8EEC /* Endpoint */,
@@ -129,9 +134,34 @@
 		B1568FDB268ED94900AF8EEC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				B1568FDC268ED95400AF8EEC /* Card.swift */,
+				B1568FE2268F128E00AF8EEC /* Decodable */,
+				B1568FE1268F128000AF8EEC /* UI */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		B1568FDE268F0DF200AF8EEC /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B1568FDF268F0E1900AF8EEC /* CardsViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B1568FE1268F128000AF8EEC /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B1568FE3268F132C00AF8EEC /* CardElement.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B1568FE2268F128E00AF8EEC /* Decodable */ = {
+			isa = PBXGroup;
+			children = (
+				B1568FDC268ED95400AF8EEC /* Card.swift */,
+			);
+			path = Decodable;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +267,10 @@
 				B1568FC0268EC81900AF8EEC /* ContentView.swift in Sources */,
 				B1568FD8268ED4C800AF8EEC /* CardsService.swift in Sources */,
 				B1568FBE268EC81900AF8EEC /* PokemonCardsApp.swift in Sources */,
+				B1568FE0268F0E1900AF8EEC /* CardsViewModel.swift in Sources */,
 				B1568FDA268ED50A00AF8EEC /* CardsServiceError.swift in Sources */,
 				B1568FD1268EC91C00AF8EEC /* APIEndpoint.swift in Sources */,
+				B1568FE4268F132C00AF8EEC /* CardElement.swift in Sources */,
 				B1568FDD268ED95400AF8EEC /* Card.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

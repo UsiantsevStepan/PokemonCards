@@ -8,27 +8,20 @@
 import Foundation
 
 protocol CardsRequests {
-    func cards(pageNumber: Int) async throws
+    func cards(pageNumber: Int) async throws -> [Card]
 }
 
-class CardsService: CardsRequests, ObservableObject {
-    @Published private(set) var cards = [Card]()
-    @Published private(set) var isFetching = false
-    
+actor CardsService: CardsRequests {
     private let networkService = NetworkService()
     
-    @MainActor
-    func cards(pageNumber: Int) async throws {
-        isFetching = true
-        defer { isFetching = false }
-        
+    func cards(pageNumber: Int) async throws -> [Card] {
         do {
             let data = try await networkService.getData(endpoint: .getCards(page: pageNumber))
             guard let decodedData = try? JSONDecoder().decode(CardData.self, from: data) else {
                 throw CardsServiceError.decodingError
             }
             
-            cards += decodedData.data
+            return decodedData.data
         } catch {
             throw error
         }
