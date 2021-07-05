@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CardCell: Identifiable {
+struct CardCell: Identifiable, Hashable {
     let id = UUID()
     
     let name: String
