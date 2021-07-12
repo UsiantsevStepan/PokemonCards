@@ -23,6 +23,7 @@ extension Endpoint {
 
 enum APIEndpoint {
     case getCards(page: Int)
+    case getTypes
 }
 
 extension APIEndpoint: Endpoint {
@@ -34,6 +35,8 @@ extension APIEndpoint: Endpoint {
         switch self {
         case .getCards:
             return "/cards"
+        case .getTypes:
+            return "/types"
         }
     }
 
@@ -47,6 +50,8 @@ extension APIEndpoint: Endpoint {
         switch self {
         case .getCards(page: let pageNumber):
             queryParams.updateValue("\(pageNumber)", forKey: "page")
+            return queryParams
+        case .getTypes:
             return queryParams
         }
     }

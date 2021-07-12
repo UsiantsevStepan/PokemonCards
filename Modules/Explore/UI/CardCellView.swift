@@ -11,7 +11,7 @@ struct CardCellView: View {
     var cardCell: CardCell
     
     var body: some View {
-        VStack {
+        VStack(spacing: 0) {
             AsyncImage(url: cardCell.imageURL) { phase in
                 switch phase {
                 case .empty:
@@ -35,28 +35,36 @@ struct CardCellView: View {
                         VStack {
                             Text("Type: \(cardCell.types!)")
                                 .font(.system(.body))
-                                .foregroundColor(.gray)
+                                .foregroundColor(.white)
                         }
                     }
                     .foregroundColor(.white)
                     .padding(12)
-                    .background(Blur(style: .systemMaterialDark))
-                    .frame(width: 300, height: 450, alignment: .bottom)
+                    .background(Blur(style: .systemThinMaterialDark))
+                    .frame(
+                        width: 320,
+                        height: 520,
+                        alignment: .bottom
+                    )
                     .background(
+                        VStack(spacing: 0) {
                         image
                             .resizable()
                             .aspectRatio(contentMode: .fill)
+                            .frame(width: 320, height: 450)
+                            .background(cardCell.cardTypeColor)
+                            .cornerRadius(
+                                radius: 30,
+                                corners: [.topLeft, .topRight]
+                            )
+                        cardCell.cardTypeColor
+                            .frame(width: 320, height: 60)
+                    }
                     )
                     .clipShape(RoundedRectangle(
                         cornerRadius: 30,
                         style: .continuous
                     ))
-                    .shadow(
-                        color: .black.opacity(0.9),
-                        radius: 10,
-                        x: 0,
-                        y: 10
-                    )
                     
                 case .failure:
                     Image(systemName: "photo")

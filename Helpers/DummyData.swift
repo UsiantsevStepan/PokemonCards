@@ -10,7 +10,9 @@ import Foundation
 class DummyData {
     static let cardCell = CardCell(
         name: "Pokemon",
-        imageURL: URL(string: "https://images.pokemontcg.io/pl1/1_hires.png"),
+        imageURL: URL(string: "https://images.pokemontcg.io/det1/1_hires.png"),
         hp: "30",
-        types: "Grass")
+        types: "Grass",
+        cardTypeColor: .green
+    )
 }

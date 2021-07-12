@@ -14,28 +14,31 @@ struct ContentView: View {
         NavigationView {
             VStack(spacing: 0) {
                 HStack {
-                    Text("Card details")
+                    Text("Cards")
                         .font(.system(size: 20, weight: .bold, design: .default))
                         .padding(.leading)
                     Spacer()
                     Button("See All") {
                         
                     }
+                    .padding(.trailing)
                 }
-                .padding(.trailing)
                 
                 ScrollView(.horizontal, showsIndicators: false) {
                     VStack {
-                        HStack {
+                        HStack(spacing: 15) {
                             ForEach(cardsViewModel.cardsToExplore, id: \.self) { card in
                                 CardCellView(cardCell: card)
-                                    .padding()
                                     .padding(.top, 0)
                             }
                         }
+                        .padding(.leading)
+                        .padding(.trailing)
                         Spacer()
                     }
                 }
+                .frame(height: 520)
+                .padding(.top, 10)
                 .onAppear {
                     async {
                         do {
@@ -46,6 +49,7 @@ struct ContentView: View {
                         }
                     }
                 }
+                Spacer()
             }
             .navigationBarTitle("Explore")
         }

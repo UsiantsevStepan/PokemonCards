@@ -10,6 +10,7 @@ import Foundation
 class CardsViewModel: ObservableObject {
     @Published private(set) var cardsToExplore = [CardCell]()
     @Published private(set) var isFetching = false
+    @Published private(set) var cardTypes = [CardType]()
     
     private var pageNumber = 1
     
@@ -38,7 +39,8 @@ class CardsViewModel: ObservableObject {
                     name: card.name,
                     imageURL: imageURL,
                     hp: card.hp,
-                    types: types
+                    types: types,
+                    cardTypeColor: CardType(name: card.types.first).color
                 )
             )
         }

@@ -5,7 +5,7 @@
 //  Created by Степан Усьянцев on 02.07.2021.
 //
 
-import Foundation
+import SwiftUI
 
 struct CardCell: Identifiable, Hashable {
     let id = UUID()
@@ -14,4 +14,5 @@ struct CardCell: Identifiable, Hashable {
     let imageURL: URL?
     let hp: String
     let types: String?
+    let cardTypeColor: Color
 }
